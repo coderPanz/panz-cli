@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 // '#!/usr/bin/env node' : 用来告诉脚本工具(bash/zsh)，下面的内容是要在node环境中运行的代码
+// const commander = require("commander")
 const commander = require("commander")
 const pkg = require("./package.json")
 // 拉取代码的工具：download-git-repo
@@ -61,19 +62,19 @@ program
       switch (param) {
         // direct: 前缀告诉 download-git-repo 库直接使用提供的 URL 下载仓库，而不是通过托管服务的 API。
         case "vue3":
-          repo = "direct:https://github.com/coderPanz/vue-cli.git#main"
+          repo = "direct:https://github.com/coderPanz/vue3-cli.git#main"
           break
         case "vue2":
           repo = "direct:https://github.com/coderPanz/vue2-cli.git#main"
           break
         case "custom-vue":
-          repo = "direct:https://github.com/your-custom-repo.git"
+          repo = "direct:https://github.com/your-custom-repo.git#main"
           break
         case "react-hooks":
-          repo = "https://github.com/coderPanz/react-cli.git$main"
+          repo = "direct:https://github.com/coderPanz/react-cli.git#main"
           break
         case "react-class":
-          repo = "https://github.com/vuejs/vue-cli.git#vue2"
+          repo = "direct:https://github.com/vuejs/vue-cli.git#vue2"
           break
         default:
           templateSpinner.fail("未知模版⚠️")

@@ -69,7 +69,7 @@ module.exports = {
       message: "请选择你的模版预设：",
       choices: [
         {
-          name: `模版一 ${green("React-Hooks")}`,
+          name: `模版一 ${green("React")}`,
           value: "react-hooks",
         },
         // {
