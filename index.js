@@ -67,18 +67,19 @@ program
           repo = "direct:https://github.com/coderPanz/vue2-cli.git#main"
           break
         case "custom-vue":
-          repo = "direct:https://github.com/your-custom-repo.git"
+          repo = "direct:https://github.com/your-custom-repo.git#main"
           break
         case "react-hooks":
-          repo = "https://github.com/coderPanz/react-cli.git$main"
+          repo = "direct:https://github.com/coderPanz/react-cli.git#main"
           break
         case "react-class":
-          repo = "https://github.com/vuejs/vue-cli.git#vue2"
+          repo = "direct:https://github.com/vuejs/vue-cli.git#vue2"
           break
         default:
           templateSpinner.fail("未知模版⚠️")
           return
       }
+      console.log('first', repo)
       download(repo, projectPath, { clone: true }, err => {
         if (err) {
           templateSpinner.fail("模版下载失败☹️")

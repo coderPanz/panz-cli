@@ -1,14 +1,22 @@
 {
   "name": "panz-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue-cli-project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vue-cli",
+    "react-cli",
+    "cli"
+  ],
+  "author": "coderpanz",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderPanz/panz-cli"
+  },
   "bin": {
     "panz": "index.js"
   },
