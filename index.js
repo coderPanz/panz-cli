@@ -38,9 +38,15 @@ program
 
     if (vue) {
       const vueRes = await inquirer.prompt(vueConfig)
-      vueRes.preset === "custom-vue"
-        ? await inquirer.prompt(vueCustomConfig)
-        : templateDownload(vueRes.preset, projectPath, name, isInstall)
+      if (vueRes.preset === "custom-vue") {
+        await inquirer.prompt(vueCustomConfig)
+        const templateSpinner = ora({
+          text: "模版下载中...",
+          spinner: "earth",
+        }).start()
+      } else {
+        templateDownload(vueRes.preset, projectPath, name, isInstall)
+      }
     } else if (react) {
       const reactRes = await inquirer.prompt(reactConfig)
       templateDownload(reactRes.preset, projectPath, name, isInstall)
