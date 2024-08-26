@@ -47,12 +47,11 @@ module.exports = {
       message: "请选择你的自定义配置：",
       choices: [
         "Babel",
-        "TypeScript",
+        "Eslint",
         "Router",
         "Vuex",
-        "Pinia",
         "Unit Testing",
-        "E2E Testing",
+        "browsersList" // 浏览器适配程度
       ],
       validate: function (answer) {
         if (answer.length < 1) {
